@@ -1,4 +1,9 @@
 {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
     "include": [
         "./src/**/*.ts"
     ]
