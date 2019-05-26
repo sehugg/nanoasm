@@ -70,7 +70,7 @@ This rule emits an opcode 16 bits (two bytes) long.
 
 ## Directives
 
-An assembler recognizes certain \term{directives} that do not emit machine code, but configure various options.
+An assembler recognizes certain directives that do not emit machine code, but configure various options.
 In our custom JSASM assembler, these directives are supported:
 
 `.arch <arch>` -- Required. Loads the file `<arch>.json` and configures the assembler.
@@ -87,7 +87,7 @@ In our custom JSASM assembler, these directives are supported:
 
 `.string .....` -- Converts a string to machine words, then includes it in the output.
 
-`.align <value>` -- Align the current IP to a multiple of <value>.
+`.align <value>` -- Align the current IP to a multiple of `<value>`.
 
 # LICENSE
 
