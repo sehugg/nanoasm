@@ -6,6 +6,18 @@ A tiny configurable assembler for Verilog projects, as described in the book "[D
 
 TODO
 
+## Usage
+
+    node src/asmmain.js <config.json> <file.asm>
+
+Output binary is hex format, one line per word, compatible with Verilog's
+`$readmemh` command.
+
+## Examples
+
+    cd examples
+    make
+
 ## Configuration
 
 NANOASM can translate custom assembly language for Verilog CPUs.
