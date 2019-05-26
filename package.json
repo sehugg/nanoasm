@@ -1,0 +1,19 @@
+{
+  "name": "nanoasm",
+  "version": "0.1.0",
+  "description": "A tiny configurable assembler for Verilog projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sehugg/nanoasm/"
+  },
+  "author": "Steven Hugg",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  }
+}
