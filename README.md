@@ -69,8 +69,7 @@ This rule emits an opcode 16 bits (two bytes) long.
 
 ## Directives
 
-An assembler recognizes certain directives that do not emit machine code, but configure various options.
-In our custom JSASM assembler, these directives are supported:
+NANOASM supports these directives:
 
 `.arch <arch>` -- Required. Loads the file `<arch>.json` and configures the assembler.
 
