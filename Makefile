@@ -1,3 +1,0 @@
-
-all:
-	tsc src/*.ts
