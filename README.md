@@ -4,7 +4,7 @@ A tiny configurable assembler for Verilog projects, as described in the book "[D
 
 ## Installation
 
-TODO
+    npm i
 
 ## Usage
 
