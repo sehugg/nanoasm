@@ -44,6 +44,12 @@ For example, this defines a 4-bit variable named `const4`:
 
     "const4":{"bits":4}
 
+The assembler rules are big-endian by default (most significant bits first) so if
+you need constants larger than a single machine word, set the "endian"
+property:
+
+    "abs16":{"bits":16,"endian":"little"}
+
 To include a variable in a rule, prefix the variable's name with a tilde (\textasciitilde).
 For example, our `sta` rule takes one `~const4` variable:
 
@@ -56,6 +62,16 @@ An example: The assembler is given the instruction `sta 15`.
 It matches the rule `sta ~const4`, and assigns 15 to the first variable slot.
 It then outputs the the bits `1001` and then the 4-bit value 15, or `1111`.
 The final opcode is `10011111` or `$9f`.
+
+Instead of a single integer index, you can emit a slice of bits.
+This comes in handy for instruction sets where values are not contiguous,
+for example RISC-V:
+
+    // for argument 1, take 7 bits starting at index 5, then 5 bits starting
+    // at index 0
+    // {a = argument index, b = bit index, n = number of bits}
+    {"fmt":"sb ~reg,~imm12(~reg)",   "bits":[{"a":1,"b":5,"n":7},2,0,"000",{"a":1,"b":0,"n":5},"0100011"]},
+
 
 ## Tokens
 
